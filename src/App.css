@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*css for app.jsx */
+.container{
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  width: 520px;
+  min-height: 600px;
+  background:white;
+  text-align: center;
+  margin: 90px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+}
+
+/* css for Todo.jsx */
+.header{
+margin: 32px 0;
+font-size: 24px;
+}
+
+/* css for TodoForm.jsx */
+.todo_form{
+  margin-bottom: 32px;
+}
+
+.input-add{
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 2px solid #5d0cff;
+  width: 320px;
+  background: transparent;
+  color:black;    
+}
+
+.input-edit{
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 2px solid #5d0cff;
+  box-shadow: 10px 5px 5px rgb(139, 123, 169);
+  width: 320px;
+  background: transparent;
+  color:black;
+}
+
+.edit-button,
+.add-button{
+padding: 16px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+outline: none;
+background: linear-gradient(
+  90deg,
+  rgba(93, 12, 255, 1) 0%,
+  rgba(155, 0, 250, 1) 100%
+);
+color: #fff;
+text-transform: capitalize;
+}
+
+/* css for TodoList.jsx */
+.todo-container{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 4px auto;
+color: #fff;
+background: linear-gradient(
+  90deg,
+  rgb(144, 10, 211) 0%,
+  rgb(235, 230, 228) 100%
+);
+
+padding: 16px;
+border-radius: 5px;
+width: 380px;
+}
+
+.todo-complete{
+text-decoration: line-through;
+opacity: 0.4;
+align-items: center;
+margin: 4px auto;
+background: linear-gradient(
+  90deg,
+  rgb(144, 10, 211) 0%,
+  rgb(235, 230, 228) 100%
+);
+padding: 16px;
+border-radius: 5px;
+width: 380px;
+}
+.icons {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.delete-icon {
+  margin-right: 5px;
+  color: red;
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.edit-icon {
+ color: skyblue;
 }
