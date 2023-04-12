@@ -1,16 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
 
 function Todo() {
   const [todos, setTodos] = useState([]);
 
+  useEffect(() => {
+    const storedTodos = JSON.parse(localStorage.getItem("todos"));
+    if (storedTodos) {
+      setTodos(storedTodos);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
+
   //function to add items once user click add button
   const addTodo = (todo) => {
     // Submit the todo if the text is not empty
     if (todo.text.trim() !== "") {
-      const newTodos = [todo, ...todos];
-      setTodos(newTodos);
+      setTodos([todo, ...todos]);
       // console.log(...todos);
     }
   };
