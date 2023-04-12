@@ -24,7 +24,7 @@ function TodoList({ todos, updateTodo, removeTodo, completeTodo }) {
     <>
       <div
         className={todo.isComplete ? "todo-complete" : "todo-container"}
-        key={index}
+        key={index.toString()}
       >
         <div key={todo.id} onClick={() => completeTodo(todo.id)}>
           {todo.text}

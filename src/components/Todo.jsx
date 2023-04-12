@@ -7,9 +7,12 @@ function Todo() {
 
   //function to add items once user click add button
   const addTodo = (todo) => {
-    const newTodos = [todo, ...todos];
-    setTodos(newTodos);
-    console.log(...todos);
+    // Submit the todo if the text is not empty
+    if (todo.text.trim() !== "") {
+      const newTodos = [todo, ...todos];
+      setTodos(newTodos);
+      // console.log(...todos);
+    }
   };
 
   //function to update items once user click update button
@@ -39,7 +42,7 @@ function Todo() {
 
   return (
     <div>
-      <h1 className="header">Add your Plan for Today?</h1>
+      <h1 className="header">Add your todos?</h1>
 
       {/*once we display header to the webpage 
       we will pass the function as props to TodoForm and TodoList to display the data to user*/}
