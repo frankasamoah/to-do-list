@@ -47,7 +47,7 @@ function TodoForm(props) {
       ) : (
         <>
           <input
-            placeholder="Add your plan to list"
+            placeholder="Add your todo to list"
             value={input}
             onChange={handleChange}
             name="text"

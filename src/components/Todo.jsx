@@ -42,7 +42,7 @@ function Todo() {
 
   return (
     <div>
-      <h1 className="header">Add your todos?</h1>
+      <h1 className="header">Add your plan</h1>
 
       {/*once we display header to the webpage 
       we will pass the function as props to TodoForm and TodoList to display the data to user*/}
